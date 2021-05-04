@@ -1,0 +1,40 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+     Product product1 = new Product();
+            product1.Marka = "TURKCELL";
+            product1.Model = "T1";
+            product1.StokMiktarı = 20000;
+
+
+            Product product2 = new Product();
+            product2.Marka = "TURKCELL";
+            product2.Model = "T1 5G Pro";
+            product2.StokMiktarı = 18520;
+
+
+            Product product3 = new Product();
+            product3.Marka = "TURKCELL";
+            product3.Model= "C1 5G LİTE";
+            product3.StokMiktarı = 16264;
+
+            Product[] products = new Product[] { product1, product2, product3 };
+            foreach (var product in products)
+            {
+                Console.WriteLine(product.Marka +":"+product.Model);
+            }
+
+            for(int i =0;i<products.Length;i++)
+            {
+
+            }
+  }
+}
+   class Product
+    {
+        public string Marka { get; set; }
+        public string Model { get; set; }
+        public int StokMiktarı { get; set; }
+
+    }
